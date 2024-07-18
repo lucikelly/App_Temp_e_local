@@ -37,30 +37,30 @@
         <form >
           <div id="endereços" class="mb-3 col-12">
             <label for="nome" class="form-label">Primeiro Nome:</label>
-            <input type="text" class="form-control" id="nome" aria-describedby="nome" placeholder="Insira seu primeiro nome:">
+            <input type="text" class="form-control" id="nome" required aria-describedby="nome" placeholder="Insira seu primeiro nome:">
             
           </div>
           <div class="mb-3 col-12">
             <label for="email" class="form-label">E-mail:</label>
-            <input type="email" class="form-control" id="email" placeholder="Insira seu e-mail:">
+            <input type="email" class="form-control" id="email" required placeholder="Insira seu e-mail:">
             
           </div>
           <div class="mb-3 col-12">
             <label for="cep" class="form-label">Digite o CEP:</label>
-            <input type="text" class="form-control" id="cep" placeholder="Insira o CEP:">
+            <input type="text" class="form-control" id="cep" required placeholder="Insira o CEP:">
           </div>
           
             <label for="prevTemp" class="form-label ">Digite a latitude e longitude para saber a previsão:</label>
             <div id="temp" class="d-flex mb-5 col-12" >
               <div class="col-auto">
-                <input type="text"  class="form-control " id="latitude" placeholder="Latitude:">
+                <input type="text"  class="form-control " id="latitude" required placeholder="Latitude:">
               </div>
               <div class="col-auto" id="input">
-                <input type="text" class="form-control " id="longitude" placeholder="Longitude:">
+                <input type="text" class="form-control " id="longitude" required placeholder="Longitude:">
               </div>
           </div>
           
-          <button type="submit" class="btn btn-primary mt-3" id="button">Acessar</button>
+          <button type="button" class="btn btn-primary mt-3" id="button"  onclick="Temp(), Localizar()">Acessar</button>
         </form>
       </div>
     </div>
@@ -78,9 +78,9 @@
           <p>Localidade/UF</p>
         </div>
         <div id="recebeInfor">
-          <p>Logradouro/nome</p>
-          <p>Bairro/Distrito</p>
-          <p>Bairro/Distrito</p>
+          <p id="Logradouro"></p>
+          <p id="Bairro"></p>
+          <p id="Localidade"></p>
         </div>
 
       
@@ -91,7 +91,7 @@
       <img src="img/temp.svg" width="100px" alt="">
     </div>
     <div id="resultTemp">
-      <input type="text" id="recebeTemp" >
+      <input type="text" id="recebeTemp" readonly>
     </div>
 
     
