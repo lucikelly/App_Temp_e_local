@@ -15,9 +15,9 @@
 </head>
 <body>
     <header>
-      <nav  class="navbar navbar bg-primary ">
+      <nav id="nav" class="navbar navbar bg-primary ">
         <h1 id="titulo">DncWeather</h1>
-        <div class="d-flex" >
+        <div id="links"  class="d-flex" >
           
             <a class="nav-link me-4" href="#form" >Endereços</a>
             <a class="nav-link me-5" href="#form">Previsão do Tempo</a>
@@ -51,7 +51,7 @@
           </div>
           
             <label for="prevTemp" class="form-label ">Digite a latitude e longitude para saber a previsão:</label>
-            <div id="temp" class="d-flex mb-5 col-12" >
+            <div id="temp" class="d-flex mb-5 col-auto" >
               <div class="col-auto">
                 <input type="text"  class="form-control " id="latitude" required placeholder="Latitude:">
               </div>
@@ -60,7 +60,7 @@
               </div>
           </div>
           
-          <button type="button" class="btn btn-primary mt-3" id="button"  onclick="Temp(), Localizar()">Acessar</button>
+         <a href="#tituloResult"><button type="button" class="btn btn-primary mt-3" id="button"  onclick="Temp(), Localizar()">Acessar</button></a> 
         </form>
       </div>
     </div>
